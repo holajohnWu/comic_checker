@@ -1,0 +1,20 @@
+<div style="margin-bottom: 1em">
+  <button mat-raised-button style="margin-right: 1em;" (click)="get()">Get Last</button>
+  <button mat-raised-button (click)="refresh()">Refresh</button>
+</div>
+
+<mat-progress-bar mode="indeterminate" *ngIf="isLoading"></mat-progress-bar>
+<mat-card>
+  <mat-card-title>
+    <mat-label *ngIf="modified">Last Refresh: {{modified | date:'yyyy-MM-dd HH:mm:ss'}}</mat-label>
+  </mat-card-title>
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item *ngFor="let comic of comics">
+        <img matListAvatar src="{{comic.img}}" alt="Photo of a Shiba Inu">
+        <div mat-line>{{ comic.name }}</div>
+        <div mat-line>{{ comic.last_update }}/{{ comic.chapter }}</div>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>
