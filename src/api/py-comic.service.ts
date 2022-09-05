@@ -7,6 +7,7 @@ export class Comic {
   img!: string;
   last_update!: string;
   chapter!: string;
+  url?: string;
 }
 
 export class ComicInfo {

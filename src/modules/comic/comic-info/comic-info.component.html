@@ -12,8 +12,9 @@
     <mat-list>
       <mat-list-item *ngFor="let comic of comics">
         <img matListAvatar src="{{comic.img}}" alt="Photo of a Shiba Inu">
-        <div mat-line>{{ comic.name }}</div>
+        <div mat-line> <a [href]="comic.url" target="_blank">{{ comic.name }}</a> </div>
         <div mat-line>{{ comic.last_update }}/{{ comic.chapter }}</div>
+        <mat-divider></mat-divider>
       </mat-list-item>
     </mat-list>
   </mat-card-content>

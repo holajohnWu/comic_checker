@@ -16,7 +16,8 @@ const MAT_MODULES = [
   MatFormFieldModule,
   MatListModule,
   MatDividerModule,
-  MatProgressBarModule
+  MatProgressBarModule,
+  MatButtonModule
 ]
 
 @NgModule({
